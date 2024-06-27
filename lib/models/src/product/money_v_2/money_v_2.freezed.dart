@@ -14,25 +14,25 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-MoneyV2 _$PriceV2FromJson(Map<String, dynamic> json) {
-  return _PriceV2.fromJson(json);
+MoneyV2 _$MoneyV2FromJson(Map<String, dynamic> json) {
+  return _MoneyV2.fromJson(json);
 }
 
 /// @nodoc
-mixin _$PriceV2 {
+mixin _$MoneyV2 {
   @JsonKey(fromJson: JsonHelper.amountFromJson)
   double get amount => throw _privateConstructorUsedError;
   String get currencyCode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PriceV2CopyWith<MoneyV2> get copyWith => throw _privateConstructorUsedError;
+  $MoneyV2CopyWith<MoneyV2> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PriceV2CopyWith<$Res> {
-  factory $PriceV2CopyWith(MoneyV2 value, $Res Function(MoneyV2) then) =
-      _$PriceV2CopyWithImpl<$Res, MoneyV2>;
+abstract class $MoneyV2CopyWith<$Res> {
+  factory $MoneyV2CopyWith(MoneyV2 value, $Res Function(MoneyV2) then) =
+      _$MoneyV2CopyWithImpl<$Res, MoneyV2>;
   @useResult
   $Res call(
       {@JsonKey(fromJson: JsonHelper.amountFromJson) double amount,
@@ -40,9 +40,9 @@ abstract class $PriceV2CopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PriceV2CopyWithImpl<$Res, $Val extends MoneyV2>
-    implements $PriceV2CopyWith<$Res> {
-  _$PriceV2CopyWithImpl(this._value, this._then);
+class _$MoneyV2CopyWithImpl<$Res, $Val extends MoneyV2>
+    implements $MoneyV2CopyWith<$Res> {
+  _$MoneyV2CopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -69,10 +69,10 @@ class _$PriceV2CopyWithImpl<$Res, $Val extends MoneyV2>
 }
 
 /// @nodoc
-abstract class _$$PriceV2ImplCopyWith<$Res> implements $PriceV2CopyWith<$Res> {
-  factory _$$PriceV2ImplCopyWith(
-          _$PriceV2Impl value, $Res Function(_$PriceV2Impl) then) =
-      __$$PriceV2ImplCopyWithImpl<$Res>;
+abstract class _$$MoneyV2ImplCopyWith<$Res> implements $MoneyV2CopyWith<$Res> {
+  factory _$$MoneyV2ImplCopyWith(
+          _$MoneyV2Impl value, $Res Function(_$MoneyV2Impl) then) =
+      __$$MoneyV2ImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -81,11 +81,11 @@ abstract class _$$PriceV2ImplCopyWith<$Res> implements $PriceV2CopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$PriceV2ImplCopyWithImpl<$Res>
-    extends _$PriceV2CopyWithImpl<$Res, _$PriceV2Impl>
-    implements _$$PriceV2ImplCopyWith<$Res> {
-  __$$PriceV2ImplCopyWithImpl(
-      _$PriceV2Impl _value, $Res Function(_$PriceV2Impl) _then)
+class __$$MoneyV2ImplCopyWithImpl<$Res>
+    extends _$MoneyV2CopyWithImpl<$Res, _$MoneyV2Impl>
+    implements _$$MoneyV2ImplCopyWith<$Res> {
+  __$$MoneyV2ImplCopyWithImpl(
+      _$MoneyV2Impl _value, $Res Function(_$MoneyV2Impl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -94,7 +94,7 @@ class __$$PriceV2ImplCopyWithImpl<$Res>
     Object? amount = null,
     Object? currencyCode = null,
   }) {
-    return _then(_$PriceV2Impl(
+    return _then(_$MoneyV2Impl(
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
@@ -109,14 +109,14 @@ class __$$PriceV2ImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PriceV2Impl extends _PriceV2 {
-  _$PriceV2Impl(
+class _$MoneyV2Impl extends _MoneyV2 {
+  _$MoneyV2Impl(
       {@JsonKey(fromJson: JsonHelper.amountFromJson) required this.amount,
       required this.currencyCode})
       : super._();
 
-  factory _$PriceV2Impl.fromJson(Map<String, dynamic> json) =>
-      _$$PriceV2ImplFromJson(json);
+  factory _$MoneyV2Impl.fromJson(Map<String, dynamic> json) =>
+      _$$MoneyV2ImplFromJson(json);
 
   @override
   @JsonKey(fromJson: JsonHelper.amountFromJson)
@@ -126,14 +126,14 @@ class _$PriceV2Impl extends _PriceV2 {
 
   @override
   String toString() {
-    return 'PriceV2(amount: $amount, currencyCode: $currencyCode)';
+    return 'MoneyV2(amount: $amount, currencyCode: $currencyCode)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PriceV2Impl &&
+            other is _$MoneyV2Impl &&
             (identical(other.amount, amount) || other.amount == amount) &&
             (identical(other.currencyCode, currencyCode) ||
                 other.currencyCode == currencyCode));
@@ -146,25 +146,25 @@ class _$PriceV2Impl extends _PriceV2 {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PriceV2ImplCopyWith<_$PriceV2Impl> get copyWith =>
-      __$$PriceV2ImplCopyWithImpl<_$PriceV2Impl>(this, _$identity);
+  _$$MoneyV2ImplCopyWith<_$MoneyV2Impl> get copyWith =>
+      __$$MoneyV2ImplCopyWithImpl<_$MoneyV2Impl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PriceV2ImplToJson(
+    return _$$MoneyV2ImplToJson(
       this,
     );
   }
 }
 
-abstract class _PriceV2 extends MoneyV2 {
-  factory _PriceV2(
+abstract class _MoneyV2 extends MoneyV2 {
+  factory _MoneyV2(
       {@JsonKey(fromJson: JsonHelper.amountFromJson)
       required final double amount,
-      required final String currencyCode}) = _$PriceV2Impl;
-  _PriceV2._() : super._();
+      required final String currencyCode}) = _$MoneyV2Impl;
+  _MoneyV2._() : super._();
 
-  factory _PriceV2.fromJson(Map<String, dynamic> json) = _$PriceV2Impl.fromJson;
+  factory _MoneyV2.fromJson(Map<String, dynamic> json) = _$MoneyV2Impl.fromJson;
 
   @override
   @JsonKey(fromJson: JsonHelper.amountFromJson)
@@ -173,6 +173,6 @@ abstract class _PriceV2 extends MoneyV2 {
   String get currencyCode;
   @override
   @JsonKey(ignore: true)
-  _$$PriceV2ImplCopyWith<_$PriceV2Impl> get copyWith =>
+  _$$MoneyV2ImplCopyWith<_$MoneyV2Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }

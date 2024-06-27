@@ -9,7 +9,7 @@ part 'money_v_2.freezed.dart';
 part 'money_v_2.g.dart';
 
 @freezed
-class MoneyV2 with _$PriceV2 {
+class MoneyV2 with _$MoneyV2 {
   static NumberFormat? priceFormat;
 
   MoneyV2._();
@@ -17,10 +17,10 @@ class MoneyV2 with _$PriceV2 {
   factory MoneyV2({
     @JsonKey(fromJson: JsonHelper.amountFromJson) required double amount,
     required String currencyCode,
-  }) = _PriceV2;
+  }) = _MoneyV2;
 
   factory MoneyV2.fromJson(Map<String, dynamic> json) =>
-      _$PriceV2FromJson(json);
+      _$MoneyV2FromJson(json);
 
   String get formattedPrice => JsonHelper.chooseRightOrderOnCurrencySymbol(
         amount,
