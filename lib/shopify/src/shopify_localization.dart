@@ -17,15 +17,14 @@ class ShopifyLocalization with ShopifyError {
   ///
   /// Returns the [Localization] object for the provide [Country] code, and if none is provided
   /// the general localization object is returned.
-  Future<Localization> getLocalization({
-    String? countrycode,
-  }) async {
+  /// It provides information regarding supported [Language]s,
+  /// [Country]s and [Currencies] suuported by each country.
+  Future<Localization> getLocalization(
+      {String? countrycode, String? languageCode}) async {
     WatchQueryOptions _options;
     _options = WatchQueryOptions(
       document: gql(getLocalizationQuery),
-      variables: {
-        'country': countrycode,
-      },
+      variables: {'country': countrycode, 'language': languageCode},
       fetchPolicy: ShopifyConfig.fetchPolicy,
     );
     final QueryResult result = await _graphQLClient!.query(_options);
