@@ -1,4 +1,5 @@
 import 'package:shopify_flutter/models/src/order/successful_fulfillment/successful_fullfilment.dart';
+import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
 import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -24,13 +25,13 @@ class Order with _$Order {
     required ShippingAddress? shippingAddress,
     required ShippingAddress? billingAddress,
     required String statusUrl,
-    required PriceV2 subtotalPriceV2,
-    required PriceV2 totalPriceV2,
-    required PriceV2 totalShippingPriceV2,
-    required PriceV2 totalTaxV2,
+    required MoneyV2 subtotalPrice,
+    required MoneyV2 totalPrice,
+    required MoneyV2 totalShippingPrice,
+    required MoneyV2 totalTax,
     required String financialStatus,
     required String fulfillmentStatus,
-    PriceV2? totalRefundedV2,
+    MoneyV2? totalRefunded,
     String? phone,
     String? cursor,
     List<SuccessfulFullfilment>? successfulFulfillments,
@@ -55,12 +56,12 @@ class Order with _$Order {
             ? null
             : ShippingAddress.fromJson(json['node']['billingAddress']),
         statusUrl: json['node']['statusUrl'],
-        subtotalPriceV2: PriceV2.fromJson(json['node']['subtotalPriceV2']),
-        totalPriceV2: PriceV2.fromJson(json['node']['totalPriceV2']),
-        totalRefundedV2: PriceV2.fromJson(json['node']['totalRefundedV2']),
-        totalShippingPriceV2:
-            PriceV2.fromJson(json['node']['totalShippingPriceV2']),
-        totalTaxV2: PriceV2.fromJson(json['node']['totalTaxV2']),
+        subtotalPrice: MoneyV2.fromJson(json['node']['subtotalPriceV2']),
+        totalPrice: MoneyV2.fromJson(json['node']['totalPriceV2']),
+        totalRefunded: MoneyV2.fromJson(json['node']['totalRefundedV2']),
+        totalShippingPrice:
+            MoneyV2.fromJson(json['node']['totalShippingPriceV2']),
+        totalTax: MoneyV2.fromJson(json['node']['totalTaxV2']),
         cursor: json['cursor'],
         successfulFulfillments: _getSuccessfulFulfilments(
           json['node']['successfulFulfillments'] ?? [],

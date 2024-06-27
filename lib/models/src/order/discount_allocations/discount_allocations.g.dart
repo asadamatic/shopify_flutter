@@ -11,7 +11,7 @@ _$DiscountAllocationsImpl _$$DiscountAllocationsImplFromJson(
     _$DiscountAllocationsImpl(
       allocatedAmount: json['allocatedAmount'] == null
           ? null
-          : PriceV2.fromJson(json['allocatedAmount'] as Map<String, dynamic>),
+          : MoneyV2.fromJson(json['allocatedAmount'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$DiscountAllocationsImplToJson(

@@ -1,3 +1,4 @@
+import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
 import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:shopify_flutter/models/src/product/product.dart';
 import 'package:shopify_flutter/models/src/product/selected_option/selected_option.dart';
@@ -12,14 +13,14 @@ class ProductVariantCheckout with _$ProductVariantCheckout {
   const ProductVariantCheckout._();
 
   factory ProductVariantCheckout({
-    required PriceV2 priceV2,
+    required MoneyV2 price,
     required String title,
     required bool availableForSale,
     required bool requiresShipping,
     required String id,
     String? sku,
     ShopifyImage? image,
-    PriceV2? compareAtPrice,
+    MoneyV2? compareAtPrice,
     double? weight,
     String? weightUnit,
     @Default(0) int quantityAvailable,

@@ -8,6 +8,7 @@ import '../../../json_helper.dart';
 part 'price_v_2.freezed.dart';
 part 'price_v_2.g.dart';
 
+@Deprecated('PriceV2 is depricated, Use MoneyV2 instead.')
 @freezed
 class PriceV2 with _$PriceV2 {
   static NumberFormat? priceFormat;

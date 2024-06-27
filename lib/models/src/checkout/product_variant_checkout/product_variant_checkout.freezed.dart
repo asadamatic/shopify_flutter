@@ -21,14 +21,14 @@ ProductVariantCheckout _$ProductVariantCheckoutFromJson(
 
 /// @nodoc
 mixin _$ProductVariantCheckout {
-  PriceV2 get priceV2 => throw _privateConstructorUsedError;
+  MoneyV2 get price => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   bool get availableForSale => throw _privateConstructorUsedError;
   bool get requiresShipping => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
   String? get sku => throw _privateConstructorUsedError;
   ShopifyImage? get image => throw _privateConstructorUsedError;
-  PriceV2? get compareAtPrice => throw _privateConstructorUsedError;
+  MoneyV2? get compareAtPrice => throw _privateConstructorUsedError;
   double? get weight => throw _privateConstructorUsedError;
   String? get weightUnit => throw _privateConstructorUsedError;
   int get quantityAvailable => throw _privateConstructorUsedError;
@@ -49,23 +49,23 @@ abstract class $ProductVariantCheckoutCopyWith<$Res> {
       _$ProductVariantCheckoutCopyWithImpl<$Res, ProductVariantCheckout>;
   @useResult
   $Res call(
-      {PriceV2 priceV2,
+      {MoneyV2 price,
       String title,
       bool availableForSale,
       bool requiresShipping,
       String id,
       String? sku,
       ShopifyImage? image,
-      PriceV2? compareAtPrice,
+      MoneyV2? compareAtPrice,
       double? weight,
       String? weightUnit,
       int quantityAvailable,
       Product? product,
       List<SelectedOption> selectedOptions});
 
-  $PriceV2CopyWith<$Res> get priceV2;
+  $MoneyV2CopyWith<$Res> get price;
   $ShopifyImageCopyWith<$Res>? get image;
-  $PriceV2CopyWith<$Res>? get compareAtPrice;
+  $MoneyV2CopyWith<$Res>? get compareAtPrice;
   $ProductCopyWith<$Res>? get product;
 }
 
@@ -83,7 +83,7 @@ class _$ProductVariantCheckoutCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? priceV2 = null,
+    Object? price = null,
     Object? title = null,
     Object? availableForSale = null,
     Object? requiresShipping = null,
@@ -98,10 +98,10 @@ class _$ProductVariantCheckoutCopyWithImpl<$Res,
     Object? selectedOptions = null,
   }) {
     return _then(_value.copyWith(
-      priceV2: null == priceV2
-          ? _value.priceV2
-          : priceV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -129,7 +129,7 @@ class _$ProductVariantCheckoutCopyWithImpl<$Res,
       compareAtPrice: freezed == compareAtPrice
           ? _value.compareAtPrice
           : compareAtPrice // ignore: cast_nullable_to_non_nullable
-              as PriceV2?,
+              as MoneyV2?,
       weight: freezed == weight
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
@@ -155,9 +155,9 @@ class _$ProductVariantCheckoutCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res> get priceV2 {
-    return $PriceV2CopyWith<$Res>(_value.priceV2, (value) {
-      return _then(_value.copyWith(priceV2: value) as $Val);
+  $MoneyV2CopyWith<$Res> get price {
+    return $MoneyV2CopyWith<$Res>(_value.price, (value) {
+      return _then(_value.copyWith(price: value) as $Val);
     });
   }
 
@@ -175,12 +175,12 @@ class _$ProductVariantCheckoutCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res>? get compareAtPrice {
+  $MoneyV2CopyWith<$Res>? get compareAtPrice {
     if (_value.compareAtPrice == null) {
       return null;
     }
 
-    return $PriceV2CopyWith<$Res>(_value.compareAtPrice!, (value) {
+    return $MoneyV2CopyWith<$Res>(_value.compareAtPrice!, (value) {
       return _then(_value.copyWith(compareAtPrice: value) as $Val);
     });
   }
@@ -208,14 +208,14 @@ abstract class _$$ProductVariantCheckoutImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {PriceV2 priceV2,
+      {MoneyV2 price,
       String title,
       bool availableForSale,
       bool requiresShipping,
       String id,
       String? sku,
       ShopifyImage? image,
-      PriceV2? compareAtPrice,
+      MoneyV2? compareAtPrice,
       double? weight,
       String? weightUnit,
       int quantityAvailable,
@@ -223,11 +223,11 @@ abstract class _$$ProductVariantCheckoutImplCopyWith<$Res>
       List<SelectedOption> selectedOptions});
 
   @override
-  $PriceV2CopyWith<$Res> get priceV2;
+  $MoneyV2CopyWith<$Res> get price;
   @override
   $ShopifyImageCopyWith<$Res>? get image;
   @override
-  $PriceV2CopyWith<$Res>? get compareAtPrice;
+  $MoneyV2CopyWith<$Res>? get compareAtPrice;
   @override
   $ProductCopyWith<$Res>? get product;
 }
@@ -245,7 +245,7 @@ class __$$ProductVariantCheckoutImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? priceV2 = null,
+    Object? price = null,
     Object? title = null,
     Object? availableForSale = null,
     Object? requiresShipping = null,
@@ -260,10 +260,10 @@ class __$$ProductVariantCheckoutImplCopyWithImpl<$Res>
     Object? selectedOptions = null,
   }) {
     return _then(_$ProductVariantCheckoutImpl(
-      priceV2: null == priceV2
-          ? _value.priceV2
-          : priceV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -291,7 +291,7 @@ class __$$ProductVariantCheckoutImplCopyWithImpl<$Res>
       compareAtPrice: freezed == compareAtPrice
           ? _value.compareAtPrice
           : compareAtPrice // ignore: cast_nullable_to_non_nullable
-              as PriceV2?,
+              as MoneyV2?,
       weight: freezed == weight
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
@@ -320,7 +320,7 @@ class __$$ProductVariantCheckoutImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ProductVariantCheckoutImpl extends _ProductVariantCheckout {
   _$ProductVariantCheckoutImpl(
-      {required this.priceV2,
+      {required this.price,
       required this.title,
       required this.availableForSale,
       required this.requiresShipping,
@@ -340,7 +340,7 @@ class _$ProductVariantCheckoutImpl extends _ProductVariantCheckout {
       _$$ProductVariantCheckoutImplFromJson(json);
 
   @override
-  final PriceV2 priceV2;
+  final MoneyV2 price;
   @override
   final String title;
   @override
@@ -354,7 +354,7 @@ class _$ProductVariantCheckoutImpl extends _ProductVariantCheckout {
   @override
   final ShopifyImage? image;
   @override
-  final PriceV2? compareAtPrice;
+  final MoneyV2? compareAtPrice;
   @override
   final double? weight;
   @override
@@ -375,7 +375,7 @@ class _$ProductVariantCheckoutImpl extends _ProductVariantCheckout {
 
   @override
   String toString() {
-    return 'ProductVariantCheckout(priceV2: $priceV2, title: $title, availableForSale: $availableForSale, requiresShipping: $requiresShipping, id: $id, sku: $sku, image: $image, compareAtPrice: $compareAtPrice, weight: $weight, weightUnit: $weightUnit, quantityAvailable: $quantityAvailable, product: $product, selectedOptions: $selectedOptions)';
+    return 'ProductVariantCheckout(price: $price, title: $title, availableForSale: $availableForSale, requiresShipping: $requiresShipping, id: $id, sku: $sku, image: $image, compareAtPrice: $compareAtPrice, weight: $weight, weightUnit: $weightUnit, quantityAvailable: $quantityAvailable, product: $product, selectedOptions: $selectedOptions)';
   }
 
   @override
@@ -383,7 +383,7 @@ class _$ProductVariantCheckoutImpl extends _ProductVariantCheckout {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProductVariantCheckoutImpl &&
-            (identical(other.priceV2, priceV2) || other.priceV2 == priceV2) &&
+            (identical(other.price, price) || other.price == price) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.availableForSale, availableForSale) ||
                 other.availableForSale == availableForSale) &&
@@ -408,7 +408,7 @@ class _$ProductVariantCheckoutImpl extends _ProductVariantCheckout {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      priceV2,
+      price,
       title,
       availableForSale,
       requiresShipping,
@@ -439,14 +439,14 @@ class _$ProductVariantCheckoutImpl extends _ProductVariantCheckout {
 
 abstract class _ProductVariantCheckout extends ProductVariantCheckout {
   factory _ProductVariantCheckout(
-          {required final PriceV2 priceV2,
+          {required final MoneyV2 price,
           required final String title,
           required final bool availableForSale,
           required final bool requiresShipping,
           required final String id,
           final String? sku,
           final ShopifyImage? image,
-          final PriceV2? compareAtPrice,
+          final MoneyV2? compareAtPrice,
           final double? weight,
           final String? weightUnit,
           final int quantityAvailable,
@@ -459,7 +459,7 @@ abstract class _ProductVariantCheckout extends ProductVariantCheckout {
       _$ProductVariantCheckoutImpl.fromJson;
 
   @override
-  PriceV2 get priceV2;
+  MoneyV2 get price;
   @override
   String get title;
   @override
@@ -473,7 +473,7 @@ abstract class _ProductVariantCheckout extends ProductVariantCheckout {
   @override
   ShopifyImage? get image;
   @override
-  PriceV2? get compareAtPrice;
+  MoneyV2? get compareAtPrice;
   @override
   double? get weight;
   @override

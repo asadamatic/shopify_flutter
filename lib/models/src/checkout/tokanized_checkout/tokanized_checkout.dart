@@ -1,5 +1,6 @@
 // ignore_for_file: invalid_annotation_target
 
+import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
 import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -12,7 +13,7 @@ class TokanizedCheckout with _$TokanizedCheckout {
 
   factory TokanizedCheckout({
     @JsonKey(name: 'id') required String paymentId,
-    required PriceV2 amountV2,
+    required MoneyV2 amount,
     required bool test,
     required bool ready,
     String? nextActionUrl,

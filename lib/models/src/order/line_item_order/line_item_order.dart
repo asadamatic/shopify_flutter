@@ -1,5 +1,6 @@
 import 'package:shopify_flutter/models/src/checkout/product_variant_checkout/product_variant_checkout.dart';
 import 'package:shopify_flutter/models/src/order/discount_allocations/discount_allocations.dart';
+import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
 import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -12,8 +13,8 @@ class LineItemOrder with _$LineItemOrder {
 
   factory LineItemOrder({
     required int currentQuantity,
-    required PriceV2 discountedTotalPrice,
-    required PriceV2 originalTotalPrice,
+    required MoneyV2 discountedTotalPrice,
+    required MoneyV2 originalTotalPrice,
     required int quantity,
     required String title,
     @Default([]) List<DiscountAllocations> discountAllocations,
@@ -29,10 +30,10 @@ class LineItemOrder with _$LineItemOrder {
       LineItemOrder(
         currentQuantity: (json['node'] ?? const {})['currentQuantity'],
         discountAllocations: _getDiscountAllocationsList(json),
-        discountedTotalPrice: PriceV2.fromJson(
+        discountedTotalPrice: MoneyV2.fromJson(
             (json['node'] ?? const {})['discountedTotalPrice']),
         originalTotalPrice:
-            PriceV2.fromJson((json['node'] ?? const {})['originalTotalPrice']),
+            MoneyV2.fromJson((json['node'] ?? const {})['originalTotalPrice']),
         quantity: (json['node'] ?? const {})['quantity'],
         title: (json['node'] ?? const {})['title'],
         variant: json['node']['variant'] == null

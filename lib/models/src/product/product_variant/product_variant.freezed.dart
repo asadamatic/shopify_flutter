@@ -20,7 +20,7 @@ ProductVariant _$ProductVariantFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ProductVariant {
-  PriceV2 get price => throw _privateConstructorUsedError;
+  MoneyV2 get price => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   double get weight => throw _privateConstructorUsedError;
   String get weightUnit => throw _privateConstructorUsedError;
@@ -29,12 +29,12 @@ mixin _$ProductVariant {
   String get id => throw _privateConstructorUsedError;
   int get quantityAvailable => throw _privateConstructorUsedError;
   String? get sku => throw _privateConstructorUsedError;
-  PriceV2? get unitPrice => throw _privateConstructorUsedError;
+  MoneyV2? get unitPrice => throw _privateConstructorUsedError;
   UnitPriceMeasurement? get unitPriceMeasurement =>
       throw _privateConstructorUsedError;
   List<SelectedOption>? get selectedOptions =>
       throw _privateConstructorUsedError;
-  PriceV2? get compareAtPrice => throw _privateConstructorUsedError;
+  MoneyV2? get compareAtPrice => throw _privateConstructorUsedError;
   ShopifyImage? get image => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -50,7 +50,7 @@ abstract class $ProductVariantCopyWith<$Res> {
       _$ProductVariantCopyWithImpl<$Res, ProductVariant>;
   @useResult
   $Res call(
-      {PriceV2 price,
+      {MoneyV2 price,
       String title,
       double weight,
       String weightUnit,
@@ -59,16 +59,16 @@ abstract class $ProductVariantCopyWith<$Res> {
       String id,
       int quantityAvailable,
       String? sku,
-      PriceV2? unitPrice,
+      MoneyV2? unitPrice,
       UnitPriceMeasurement? unitPriceMeasurement,
       List<SelectedOption>? selectedOptions,
-      PriceV2? compareAtPrice,
+      MoneyV2? compareAtPrice,
       ShopifyImage? image});
 
-  $PriceV2CopyWith<$Res> get price;
-  $PriceV2CopyWith<$Res>? get unitPrice;
+  $MoneyV2CopyWith<$Res> get price;
+  $MoneyV2CopyWith<$Res>? get unitPrice;
   $UnitPriceMeasurementCopyWith<$Res>? get unitPriceMeasurement;
-  $PriceV2CopyWith<$Res>? get compareAtPrice;
+  $MoneyV2CopyWith<$Res>? get compareAtPrice;
   $ShopifyImageCopyWith<$Res>? get image;
 }
 
@@ -104,7 +104,7 @@ class _$ProductVariantCopyWithImpl<$Res, $Val extends ProductVariant>
       price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+              as MoneyV2,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -140,7 +140,7 @@ class _$ProductVariantCopyWithImpl<$Res, $Val extends ProductVariant>
       unitPrice: freezed == unitPrice
           ? _value.unitPrice
           : unitPrice // ignore: cast_nullable_to_non_nullable
-              as PriceV2?,
+              as MoneyV2?,
       unitPriceMeasurement: freezed == unitPriceMeasurement
           ? _value.unitPriceMeasurement
           : unitPriceMeasurement // ignore: cast_nullable_to_non_nullable
@@ -152,7 +152,7 @@ class _$ProductVariantCopyWithImpl<$Res, $Val extends ProductVariant>
       compareAtPrice: freezed == compareAtPrice
           ? _value.compareAtPrice
           : compareAtPrice // ignore: cast_nullable_to_non_nullable
-              as PriceV2?,
+              as MoneyV2?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -162,20 +162,20 @@ class _$ProductVariantCopyWithImpl<$Res, $Val extends ProductVariant>
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res> get price {
-    return $PriceV2CopyWith<$Res>(_value.price, (value) {
+  $MoneyV2CopyWith<$Res> get price {
+    return $MoneyV2CopyWith<$Res>(_value.price, (value) {
       return _then(_value.copyWith(price: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res>? get unitPrice {
+  $MoneyV2CopyWith<$Res>? get unitPrice {
     if (_value.unitPrice == null) {
       return null;
     }
 
-    return $PriceV2CopyWith<$Res>(_value.unitPrice!, (value) {
+    return $MoneyV2CopyWith<$Res>(_value.unitPrice!, (value) {
       return _then(_value.copyWith(unitPrice: value) as $Val);
     });
   }
@@ -195,12 +195,12 @@ class _$ProductVariantCopyWithImpl<$Res, $Val extends ProductVariant>
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res>? get compareAtPrice {
+  $MoneyV2CopyWith<$Res>? get compareAtPrice {
     if (_value.compareAtPrice == null) {
       return null;
     }
 
-    return $PriceV2CopyWith<$Res>(_value.compareAtPrice!, (value) {
+    return $MoneyV2CopyWith<$Res>(_value.compareAtPrice!, (value) {
       return _then(_value.copyWith(compareAtPrice: value) as $Val);
     });
   }
@@ -227,7 +227,7 @@ abstract class _$$ProductVariantImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {PriceV2 price,
+      {MoneyV2 price,
       String title,
       double weight,
       String weightUnit,
@@ -236,20 +236,20 @@ abstract class _$$ProductVariantImplCopyWith<$Res>
       String id,
       int quantityAvailable,
       String? sku,
-      PriceV2? unitPrice,
+      MoneyV2? unitPrice,
       UnitPriceMeasurement? unitPriceMeasurement,
       List<SelectedOption>? selectedOptions,
-      PriceV2? compareAtPrice,
+      MoneyV2? compareAtPrice,
       ShopifyImage? image});
 
   @override
-  $PriceV2CopyWith<$Res> get price;
+  $MoneyV2CopyWith<$Res> get price;
   @override
-  $PriceV2CopyWith<$Res>? get unitPrice;
+  $MoneyV2CopyWith<$Res>? get unitPrice;
   @override
   $UnitPriceMeasurementCopyWith<$Res>? get unitPriceMeasurement;
   @override
-  $PriceV2CopyWith<$Res>? get compareAtPrice;
+  $MoneyV2CopyWith<$Res>? get compareAtPrice;
   @override
   $ShopifyImageCopyWith<$Res>? get image;
 }
@@ -284,7 +284,7 @@ class __$$ProductVariantImplCopyWithImpl<$Res>
       price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+              as MoneyV2,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -320,7 +320,7 @@ class __$$ProductVariantImplCopyWithImpl<$Res>
       unitPrice: freezed == unitPrice
           ? _value.unitPrice
           : unitPrice // ignore: cast_nullable_to_non_nullable
-              as PriceV2?,
+              as MoneyV2?,
       unitPriceMeasurement: freezed == unitPriceMeasurement
           ? _value.unitPriceMeasurement
           : unitPriceMeasurement // ignore: cast_nullable_to_non_nullable
@@ -332,7 +332,7 @@ class __$$ProductVariantImplCopyWithImpl<$Res>
       compareAtPrice: freezed == compareAtPrice
           ? _value.compareAtPrice
           : compareAtPrice // ignore: cast_nullable_to_non_nullable
-              as PriceV2?,
+              as MoneyV2?,
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -366,7 +366,7 @@ class _$ProductVariantImpl extends _ProductVariant {
       _$$ProductVariantImplFromJson(json);
 
   @override
-  final PriceV2 price;
+  final MoneyV2 price;
   @override
   final String title;
   @override
@@ -384,7 +384,7 @@ class _$ProductVariantImpl extends _ProductVariant {
   @override
   final String? sku;
   @override
-  final PriceV2? unitPrice;
+  final MoneyV2? unitPrice;
   @override
   final UnitPriceMeasurement? unitPriceMeasurement;
   final List<SelectedOption>? _selectedOptions;
@@ -398,7 +398,7 @@ class _$ProductVariantImpl extends _ProductVariant {
   }
 
   @override
-  final PriceV2? compareAtPrice;
+  final MoneyV2? compareAtPrice;
   @override
   final ShopifyImage? image;
 
@@ -472,7 +472,7 @@ class _$ProductVariantImpl extends _ProductVariant {
 
 abstract class _ProductVariant extends ProductVariant {
   factory _ProductVariant(
-      {required final PriceV2 price,
+      {required final MoneyV2 price,
       required final String title,
       required final double weight,
       required final String weightUnit,
@@ -481,10 +481,10 @@ abstract class _ProductVariant extends ProductVariant {
       required final String id,
       required final int quantityAvailable,
       final String? sku,
-      final PriceV2? unitPrice,
+      final MoneyV2? unitPrice,
       final UnitPriceMeasurement? unitPriceMeasurement,
       final List<SelectedOption>? selectedOptions,
-      final PriceV2? compareAtPrice,
+      final MoneyV2? compareAtPrice,
       final ShopifyImage? image}) = _$ProductVariantImpl;
   _ProductVariant._() : super._();
 
@@ -492,7 +492,7 @@ abstract class _ProductVariant extends ProductVariant {
       _$ProductVariantImpl.fromJson;
 
   @override
-  PriceV2 get price;
+  MoneyV2 get price;
   @override
   String get title;
   @override
@@ -510,13 +510,13 @@ abstract class _ProductVariant extends ProductVariant {
   @override
   String? get sku;
   @override
-  PriceV2? get unitPrice;
+  MoneyV2? get unitPrice;
   @override
   UnitPriceMeasurement? get unitPriceMeasurement;
   @override
   List<SelectedOption>? get selectedOptions;
   @override
-  PriceV2? get compareAtPrice;
+  MoneyV2? get compareAtPrice;
   @override
   ShopifyImage? get image;
   @override

@@ -1,3 +1,4 @@
+import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
 import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:shopify_flutter/models/src/product/selected_option/selected_option.dart';
 import 'package:shopify_flutter/models/src/product/shopify_image/shopify_image.dart';
@@ -11,7 +12,7 @@ part 'product_variant.g.dart';
 class ProductVariant with _$ProductVariant {
   const ProductVariant._();
   factory ProductVariant({
-    required PriceV2 price,
+    required MoneyV2 price,
     required String title,
     required double weight,
     required String weightUnit,
@@ -20,10 +21,10 @@ class ProductVariant with _$ProductVariant {
     required String id,
     required int quantityAvailable,
     String? sku,
-    PriceV2? unitPrice,
+    MoneyV2? unitPrice,
     UnitPriceMeasurement? unitPriceMeasurement,
     List<SelectedOption>? selectedOptions,
-    PriceV2? compareAtPrice,
+    MoneyV2? compareAtPrice,
     ShopifyImage? image,
   }) = _ProductVariant;
 
@@ -31,14 +32,12 @@ class ProductVariant with _$ProductVariant {
     Map<String, dynamic> nodeJson = json['node'] ?? const {};
 
     return ProductVariant(
-      price: PriceV2.fromJson(nodeJson['priceV2']),
+      price: MoneyV2.fromJson(nodeJson['priceV2']),
       title: nodeJson['title'],
       image: nodeJson['image'] != null
           ? ShopifyImage.fromJson(nodeJson['image'])
           : null,
-      compareAtPrice: nodeJson['compareAtPriceV2'] != null
-          ? PriceV2.fromJson(nodeJson['compareAtPriceV2'])
-          : null,
+      compareAtPrice: MoneyV2.fromJson(nodeJson['compareAtPrice']),
       weight: double.tryParse(nodeJson['weight'].toString()) ?? 0.0,
       weightUnit: nodeJson['weightUnit'],
       availableForSale: nodeJson['availableForSale'],
@@ -46,9 +45,7 @@ class ProductVariant with _$ProductVariant {
       id: nodeJson['id'],
       quantityAvailable: nodeJson['quantityAvailable'],
       sku: nodeJson['sku'],
-      unitPrice: nodeJson['unitPrice'] != null
-          ? PriceV2.fromJson(nodeJson['unitPrice'])
-          : null,
+      unitPrice: MoneyV2.fromJson(nodeJson['unitPrice']),
       unitPriceMeasurement: nodeJson['unitPriceMeasurement'] != null
           ? UnitPriceMeasurement.fromJson(nodeJson['unitPriceMeasurement'])
           : null,

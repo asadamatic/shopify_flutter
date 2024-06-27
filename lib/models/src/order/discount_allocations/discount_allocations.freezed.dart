@@ -20,7 +20,7 @@ DiscountAllocations _$DiscountAllocationsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DiscountAllocations {
-  PriceV2? get allocatedAmount => throw _privateConstructorUsedError;
+  MoneyV2? get allocatedAmount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,9 +34,9 @@ abstract class $DiscountAllocationsCopyWith<$Res> {
           DiscountAllocations value, $Res Function(DiscountAllocations) then) =
       _$DiscountAllocationsCopyWithImpl<$Res, DiscountAllocations>;
   @useResult
-  $Res call({PriceV2? allocatedAmount});
+  $Res call({MoneyV2? allocatedAmount});
 
-  $PriceV2CopyWith<$Res>? get allocatedAmount;
+  $MoneyV2CopyWith<$Res>? get allocatedAmount;
 }
 
 /// @nodoc
@@ -58,18 +58,18 @@ class _$DiscountAllocationsCopyWithImpl<$Res, $Val extends DiscountAllocations>
       allocatedAmount: freezed == allocatedAmount
           ? _value.allocatedAmount
           : allocatedAmount // ignore: cast_nullable_to_non_nullable
-              as PriceV2?,
+              as MoneyV2?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res>? get allocatedAmount {
+  $MoneyV2CopyWith<$Res>? get allocatedAmount {
     if (_value.allocatedAmount == null) {
       return null;
     }
 
-    return $PriceV2CopyWith<$Res>(_value.allocatedAmount!, (value) {
+    return $MoneyV2CopyWith<$Res>(_value.allocatedAmount!, (value) {
       return _then(_value.copyWith(allocatedAmount: value) as $Val);
     });
   }
@@ -83,10 +83,10 @@ abstract class _$$DiscountAllocationsImplCopyWith<$Res>
       __$$DiscountAllocationsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({PriceV2? allocatedAmount});
+  $Res call({MoneyV2? allocatedAmount});
 
   @override
-  $PriceV2CopyWith<$Res>? get allocatedAmount;
+  $MoneyV2CopyWith<$Res>? get allocatedAmount;
 }
 
 /// @nodoc
@@ -106,7 +106,7 @@ class __$$DiscountAllocationsImplCopyWithImpl<$Res>
       allocatedAmount: freezed == allocatedAmount
           ? _value.allocatedAmount
           : allocatedAmount // ignore: cast_nullable_to_non_nullable
-              as PriceV2?,
+              as MoneyV2?,
     ));
   }
 }
@@ -120,7 +120,7 @@ class _$DiscountAllocationsImpl extends _DiscountAllocations {
       _$$DiscountAllocationsImplFromJson(json);
 
   @override
-  final PriceV2? allocatedAmount;
+  final MoneyV2? allocatedAmount;
 
   @override
   String toString() {
@@ -156,7 +156,7 @@ class _$DiscountAllocationsImpl extends _DiscountAllocations {
 }
 
 abstract class _DiscountAllocations extends DiscountAllocations {
-  factory _DiscountAllocations({required final PriceV2? allocatedAmount}) =
+  factory _DiscountAllocations({required final MoneyV2? allocatedAmount}) =
       _$DiscountAllocationsImpl;
   _DiscountAllocations._() : super._();
 
@@ -164,7 +164,7 @@ abstract class _DiscountAllocations extends DiscountAllocations {
       _$DiscountAllocationsImpl.fromJson;
 
   @override
-  PriceV2? get allocatedAmount;
+  MoneyV2? get allocatedAmount;
   @override
   @JsonKey(ignore: true)
   _$$DiscountAllocationsImplCopyWith<_$DiscountAllocationsImpl> get copyWith =>

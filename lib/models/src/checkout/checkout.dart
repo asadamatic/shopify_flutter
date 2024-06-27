@@ -1,6 +1,7 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:shopify_flutter/models/src/order/order.dart';
+import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
 import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -24,11 +25,11 @@ class Checkout with _$Checkout {
     required AvailableShippingRates? availableShippingRates,
     required String createdAt,
     required String currencyCode,
-    required PriceV2 totalTaxV2,
-    required PriceV2 totalPriceV2,
+    required MoneyV2 totalTax,
+    required MoneyV2 totalPrice,
     required bool taxesIncluded,
     required bool taxExempt,
-    required PriceV2 subtotalPriceV2,
+    required MoneyV2 subtotalPrice,
     required bool requiresShipping,
     @Default([]) List<AppliedGiftCards> appliedGiftCards,
     @JsonKey(fromJson: JsonHelper.lineItems) required List<LineItem> lineItems,

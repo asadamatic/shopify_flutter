@@ -21,8 +21,8 @@ LineItemOrder _$LineItemOrderFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LineItemOrder {
   int get currentQuantity => throw _privateConstructorUsedError;
-  PriceV2 get discountedTotalPrice => throw _privateConstructorUsedError;
-  PriceV2 get originalTotalPrice => throw _privateConstructorUsedError;
+  MoneyV2 get discountedTotalPrice => throw _privateConstructorUsedError;
+  MoneyV2 get originalTotalPrice => throw _privateConstructorUsedError;
   int get quantity => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   List<DiscountAllocations> get discountAllocations =>
@@ -43,15 +43,15 @@ abstract class $LineItemOrderCopyWith<$Res> {
   @useResult
   $Res call(
       {int currentQuantity,
-      PriceV2 discountedTotalPrice,
-      PriceV2 originalTotalPrice,
+      MoneyV2 discountedTotalPrice,
+      MoneyV2 originalTotalPrice,
       int quantity,
       String title,
       List<DiscountAllocations> discountAllocations,
       ProductVariantCheckout? variant});
 
-  $PriceV2CopyWith<$Res> get discountedTotalPrice;
-  $PriceV2CopyWith<$Res> get originalTotalPrice;
+  $MoneyV2CopyWith<$Res> get discountedTotalPrice;
+  $MoneyV2CopyWith<$Res> get originalTotalPrice;
   $ProductVariantCheckoutCopyWith<$Res>? get variant;
 }
 
@@ -84,11 +84,11 @@ class _$LineItemOrderCopyWithImpl<$Res, $Val extends LineItemOrder>
       discountedTotalPrice: null == discountedTotalPrice
           ? _value.discountedTotalPrice
           : discountedTotalPrice // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+              as MoneyV2,
       originalTotalPrice: null == originalTotalPrice
           ? _value.originalTotalPrice
           : originalTotalPrice // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+              as MoneyV2,
       quantity: null == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -110,16 +110,16 @@ class _$LineItemOrderCopyWithImpl<$Res, $Val extends LineItemOrder>
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res> get discountedTotalPrice {
-    return $PriceV2CopyWith<$Res>(_value.discountedTotalPrice, (value) {
+  $MoneyV2CopyWith<$Res> get discountedTotalPrice {
+    return $MoneyV2CopyWith<$Res>(_value.discountedTotalPrice, (value) {
       return _then(_value.copyWith(discountedTotalPrice: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res> get originalTotalPrice {
-    return $PriceV2CopyWith<$Res>(_value.originalTotalPrice, (value) {
+  $MoneyV2CopyWith<$Res> get originalTotalPrice {
+    return $MoneyV2CopyWith<$Res>(_value.originalTotalPrice, (value) {
       return _then(_value.copyWith(originalTotalPrice: value) as $Val);
     });
   }
@@ -147,17 +147,17 @@ abstract class _$$LineItemOrderImplCopyWith<$Res>
   @useResult
   $Res call(
       {int currentQuantity,
-      PriceV2 discountedTotalPrice,
-      PriceV2 originalTotalPrice,
+      MoneyV2 discountedTotalPrice,
+      MoneyV2 originalTotalPrice,
       int quantity,
       String title,
       List<DiscountAllocations> discountAllocations,
       ProductVariantCheckout? variant});
 
   @override
-  $PriceV2CopyWith<$Res> get discountedTotalPrice;
+  $MoneyV2CopyWith<$Res> get discountedTotalPrice;
   @override
-  $PriceV2CopyWith<$Res> get originalTotalPrice;
+  $MoneyV2CopyWith<$Res> get originalTotalPrice;
   @override
   $ProductVariantCheckoutCopyWith<$Res>? get variant;
 }
@@ -189,11 +189,11 @@ class __$$LineItemOrderImplCopyWithImpl<$Res>
       discountedTotalPrice: null == discountedTotalPrice
           ? _value.discountedTotalPrice
           : discountedTotalPrice // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+              as MoneyV2,
       originalTotalPrice: null == originalTotalPrice
           ? _value.originalTotalPrice
           : originalTotalPrice // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+              as MoneyV2,
       quantity: null == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -234,9 +234,9 @@ class _$LineItemOrderImpl extends _LineItemOrder {
   @override
   final int currentQuantity;
   @override
-  final PriceV2 discountedTotalPrice;
+  final MoneyV2 discountedTotalPrice;
   @override
-  final PriceV2 originalTotalPrice;
+  final MoneyV2 originalTotalPrice;
   @override
   final int quantity;
   @override
@@ -308,8 +308,8 @@ class _$LineItemOrderImpl extends _LineItemOrder {
 abstract class _LineItemOrder extends LineItemOrder {
   factory _LineItemOrder(
       {required final int currentQuantity,
-      required final PriceV2 discountedTotalPrice,
-      required final PriceV2 originalTotalPrice,
+      required final MoneyV2 discountedTotalPrice,
+      required final MoneyV2 originalTotalPrice,
       required final int quantity,
       required final String title,
       final List<DiscountAllocations> discountAllocations,
@@ -322,9 +322,9 @@ abstract class _LineItemOrder extends LineItemOrder {
   @override
   int get currentQuantity;
   @override
-  PriceV2 get discountedTotalPrice;
+  MoneyV2 get discountedTotalPrice;
   @override
-  PriceV2 get originalTotalPrice;
+  MoneyV2 get originalTotalPrice;
   @override
   int get quantity;
   @override

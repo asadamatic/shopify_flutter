@@ -9,7 +9,7 @@ part of 'product_variant_checkout.dart';
 _$ProductVariantCheckoutImpl _$$ProductVariantCheckoutImplFromJson(
         Map<String, dynamic> json) =>
     _$ProductVariantCheckoutImpl(
-      priceV2: PriceV2.fromJson(json['priceV2'] as Map<String, dynamic>),
+      price: MoneyV2.fromJson(json['price'] as Map<String, dynamic>),
       title: json['title'] as String,
       availableForSale: json['availableForSale'] as bool,
       requiresShipping: json['requiresShipping'] as bool,
@@ -20,7 +20,7 @@ _$ProductVariantCheckoutImpl _$$ProductVariantCheckoutImplFromJson(
           : ShopifyImage.fromJson(json['image'] as Map<String, dynamic>),
       compareAtPrice: json['compareAtPrice'] == null
           ? null
-          : PriceV2.fromJson(json['compareAtPrice'] as Map<String, dynamic>),
+          : MoneyV2.fromJson(json['compareAtPrice'] as Map<String, dynamic>),
       weight: (json['weight'] as num?)?.toDouble(),
       weightUnit: json['weightUnit'] as String?,
       quantityAvailable: (json['quantityAvailable'] as num?)?.toInt() ?? 0,
@@ -36,7 +36,7 @@ _$ProductVariantCheckoutImpl _$$ProductVariantCheckoutImplFromJson(
 Map<String, dynamic> _$$ProductVariantCheckoutImplToJson(
         _$ProductVariantCheckoutImpl instance) =>
     <String, dynamic>{
-      'priceV2': instance.priceV2,
+      'price': instance.price,
       'title': instance.title,
       'availableForSale': instance.availableForSale,
       'requiresShipping': instance.requiresShipping,

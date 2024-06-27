@@ -1,3 +1,4 @@
+import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
 import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -10,7 +11,7 @@ class ShippingRates with _$ShippingRates {
   factory ShippingRates(
       {required String handle,
       required String title,
-      required PriceV2 priceV2}) = _ShippingRates;
+      required MoneyV2 price}) = _ShippingRates;
 
   factory ShippingRates.fromJson(Map<String, dynamic> json) =>
       _$ShippingRatesFromJson(json);

@@ -22,7 +22,7 @@ TokanizedCheckout _$TokanizedCheckoutFromJson(Map<String, dynamic> json) {
 mixin _$TokanizedCheckout {
   @JsonKey(name: 'id')
   String get paymentId => throw _privateConstructorUsedError;
-  PriceV2 get amountV2 => throw _privateConstructorUsedError;
+  MoneyV2 get amount => throw _privateConstructorUsedError;
   bool get test => throw _privateConstructorUsedError;
   bool get ready => throw _privateConstructorUsedError;
   String? get nextActionUrl => throw _privateConstructorUsedError;
@@ -44,7 +44,7 @@ abstract class $TokanizedCheckoutCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String paymentId,
-      PriceV2 amountV2,
+      MoneyV2 amount,
       bool test,
       bool ready,
       String? nextActionUrl,
@@ -52,7 +52,7 @@ abstract class $TokanizedCheckoutCopyWith<$Res> {
       @JsonKey(name: 'checkout', fromJson: _checkoutIdFromJson)
       String? checkoutId});
 
-  $PriceV2CopyWith<$Res> get amountV2;
+  $MoneyV2CopyWith<$Res> get amount;
 }
 
 /// @nodoc
@@ -69,7 +69,7 @@ class _$TokanizedCheckoutCopyWithImpl<$Res, $Val extends TokanizedCheckout>
   @override
   $Res call({
     Object? paymentId = null,
-    Object? amountV2 = null,
+    Object? amount = null,
     Object? test = null,
     Object? ready = null,
     Object? nextActionUrl = freezed,
@@ -81,10 +81,10 @@ class _$TokanizedCheckoutCopyWithImpl<$Res, $Val extends TokanizedCheckout>
           ? _value.paymentId
           : paymentId // ignore: cast_nullable_to_non_nullable
               as String,
-      amountV2: null == amountV2
-          ? _value.amountV2
-          : amountV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+      amount: null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
       test: null == test
           ? _value.test
           : test // ignore: cast_nullable_to_non_nullable
@@ -110,9 +110,9 @@ class _$TokanizedCheckoutCopyWithImpl<$Res, $Val extends TokanizedCheckout>
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res> get amountV2 {
-    return $PriceV2CopyWith<$Res>(_value.amountV2, (value) {
-      return _then(_value.copyWith(amountV2: value) as $Val);
+  $MoneyV2CopyWith<$Res> get amount {
+    return $MoneyV2CopyWith<$Res>(_value.amount, (value) {
+      return _then(_value.copyWith(amount: value) as $Val);
     });
   }
 }
@@ -127,7 +127,7 @@ abstract class _$$TokanizedCheckoutImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String paymentId,
-      PriceV2 amountV2,
+      MoneyV2 amount,
       bool test,
       bool ready,
       String? nextActionUrl,
@@ -136,7 +136,7 @@ abstract class _$$TokanizedCheckoutImplCopyWith<$Res>
       String? checkoutId});
 
   @override
-  $PriceV2CopyWith<$Res> get amountV2;
+  $MoneyV2CopyWith<$Res> get amount;
 }
 
 /// @nodoc
@@ -151,7 +151,7 @@ class __$$TokanizedCheckoutImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? paymentId = null,
-    Object? amountV2 = null,
+    Object? amount = null,
     Object? test = null,
     Object? ready = null,
     Object? nextActionUrl = freezed,
@@ -163,10 +163,10 @@ class __$$TokanizedCheckoutImplCopyWithImpl<$Res>
           ? _value.paymentId
           : paymentId // ignore: cast_nullable_to_non_nullable
               as String,
-      amountV2: null == amountV2
-          ? _value.amountV2
-          : amountV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+      amount: null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
       test: null == test
           ? _value.test
           : test // ignore: cast_nullable_to_non_nullable
@@ -196,7 +196,7 @@ class __$$TokanizedCheckoutImplCopyWithImpl<$Res>
 class _$TokanizedCheckoutImpl extends _TokanizedCheckout {
   _$TokanizedCheckoutImpl(
       {@JsonKey(name: 'id') required this.paymentId,
-      required this.amountV2,
+      required this.amount,
       required this.test,
       required this.ready,
       this.nextActionUrl,
@@ -212,7 +212,7 @@ class _$TokanizedCheckoutImpl extends _TokanizedCheckout {
   @JsonKey(name: 'id')
   final String paymentId;
   @override
-  final PriceV2 amountV2;
+  final MoneyV2 amount;
   @override
   final bool test;
   @override
@@ -227,7 +227,7 @@ class _$TokanizedCheckoutImpl extends _TokanizedCheckout {
 
   @override
   String toString() {
-    return 'TokanizedCheckout(paymentId: $paymentId, amountV2: $amountV2, test: $test, ready: $ready, nextActionUrl: $nextActionUrl, errorMessage: $errorMessage, checkoutId: $checkoutId)';
+    return 'TokanizedCheckout(paymentId: $paymentId, amount: $amount, test: $test, ready: $ready, nextActionUrl: $nextActionUrl, errorMessage: $errorMessage, checkoutId: $checkoutId)';
   }
 
   @override
@@ -237,8 +237,7 @@ class _$TokanizedCheckoutImpl extends _TokanizedCheckout {
             other is _$TokanizedCheckoutImpl &&
             (identical(other.paymentId, paymentId) ||
                 other.paymentId == paymentId) &&
-            (identical(other.amountV2, amountV2) ||
-                other.amountV2 == amountV2) &&
+            (identical(other.amount, amount) || other.amount == amount) &&
             (identical(other.test, test) || other.test == test) &&
             (identical(other.ready, ready) || other.ready == ready) &&
             (identical(other.nextActionUrl, nextActionUrl) ||
@@ -251,7 +250,7 @@ class _$TokanizedCheckoutImpl extends _TokanizedCheckout {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, paymentId, amountV2, test, ready,
+  int get hashCode => Object.hash(runtimeType, paymentId, amount, test, ready,
       nextActionUrl, errorMessage, checkoutId);
 
   @JsonKey(ignore: true)
@@ -272,7 +271,7 @@ class _$TokanizedCheckoutImpl extends _TokanizedCheckout {
 abstract class _TokanizedCheckout extends TokanizedCheckout {
   factory _TokanizedCheckout(
       {@JsonKey(name: 'id') required final String paymentId,
-      required final PriceV2 amountV2,
+      required final MoneyV2 amount,
       required final bool test,
       required final bool ready,
       final String? nextActionUrl,
@@ -288,7 +287,7 @@ abstract class _TokanizedCheckout extends TokanizedCheckout {
   @JsonKey(name: 'id')
   String get paymentId;
   @override
-  PriceV2 get amountV2;
+  MoneyV2 get amount;
   @override
   bool get test;
   @override

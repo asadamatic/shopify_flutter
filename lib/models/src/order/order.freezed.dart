@@ -31,13 +31,13 @@ mixin _$Order {
   ShippingAddress? get shippingAddress => throw _privateConstructorUsedError;
   ShippingAddress? get billingAddress => throw _privateConstructorUsedError;
   String get statusUrl => throw _privateConstructorUsedError;
-  PriceV2 get subtotalPriceV2 => throw _privateConstructorUsedError;
-  PriceV2 get totalPriceV2 => throw _privateConstructorUsedError;
-  PriceV2 get totalShippingPriceV2 => throw _privateConstructorUsedError;
-  PriceV2 get totalTaxV2 => throw _privateConstructorUsedError;
+  MoneyV2 get subtotalPrice => throw _privateConstructorUsedError;
+  MoneyV2 get totalPrice => throw _privateConstructorUsedError;
+  MoneyV2 get totalShippingPrice => throw _privateConstructorUsedError;
+  MoneyV2 get totalTax => throw _privateConstructorUsedError;
   String get financialStatus => throw _privateConstructorUsedError;
   String get fulfillmentStatus => throw _privateConstructorUsedError;
-  PriceV2? get totalRefundedV2 => throw _privateConstructorUsedError;
+  MoneyV2? get totalRefunded => throw _privateConstructorUsedError;
   String? get phone => throw _privateConstructorUsedError;
   String? get cursor => throw _privateConstructorUsedError;
   List<SuccessfulFullfilment>? get successfulFulfillments =>
@@ -65,13 +65,13 @@ abstract class $OrderCopyWith<$Res> {
       ShippingAddress? shippingAddress,
       ShippingAddress? billingAddress,
       String statusUrl,
-      PriceV2 subtotalPriceV2,
-      PriceV2 totalPriceV2,
-      PriceV2 totalShippingPriceV2,
-      PriceV2 totalTaxV2,
+      MoneyV2 subtotalPrice,
+      MoneyV2 totalPrice,
+      MoneyV2 totalShippingPrice,
+      MoneyV2 totalTax,
       String financialStatus,
       String fulfillmentStatus,
-      PriceV2? totalRefundedV2,
+      MoneyV2? totalRefunded,
       String? phone,
       String? cursor,
       List<SuccessfulFullfilment>? successfulFulfillments});
@@ -79,11 +79,11 @@ abstract class $OrderCopyWith<$Res> {
   $LineItemsOrderCopyWith<$Res> get lineItems;
   $ShippingAddressCopyWith<$Res>? get shippingAddress;
   $ShippingAddressCopyWith<$Res>? get billingAddress;
-  $PriceV2CopyWith<$Res> get subtotalPriceV2;
-  $PriceV2CopyWith<$Res> get totalPriceV2;
-  $PriceV2CopyWith<$Res> get totalShippingPriceV2;
-  $PriceV2CopyWith<$Res> get totalTaxV2;
-  $PriceV2CopyWith<$Res>? get totalRefundedV2;
+  $MoneyV2CopyWith<$Res> get subtotalPrice;
+  $MoneyV2CopyWith<$Res> get totalPrice;
+  $MoneyV2CopyWith<$Res> get totalShippingPrice;
+  $MoneyV2CopyWith<$Res> get totalTax;
+  $MoneyV2CopyWith<$Res>? get totalRefunded;
 }
 
 /// @nodoc
@@ -110,13 +110,13 @@ class _$OrderCopyWithImpl<$Res, $Val extends Order>
     Object? shippingAddress = freezed,
     Object? billingAddress = freezed,
     Object? statusUrl = null,
-    Object? subtotalPriceV2 = null,
-    Object? totalPriceV2 = null,
-    Object? totalShippingPriceV2 = null,
-    Object? totalTaxV2 = null,
+    Object? subtotalPrice = null,
+    Object? totalPrice = null,
+    Object? totalShippingPrice = null,
+    Object? totalTax = null,
     Object? financialStatus = null,
     Object? fulfillmentStatus = null,
-    Object? totalRefundedV2 = freezed,
+    Object? totalRefunded = freezed,
     Object? phone = freezed,
     Object? cursor = freezed,
     Object? successfulFulfillments = freezed,
@@ -166,22 +166,22 @@ class _$OrderCopyWithImpl<$Res, $Val extends Order>
           ? _value.statusUrl
           : statusUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      subtotalPriceV2: null == subtotalPriceV2
-          ? _value.subtotalPriceV2
-          : subtotalPriceV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
-      totalPriceV2: null == totalPriceV2
-          ? _value.totalPriceV2
-          : totalPriceV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
-      totalShippingPriceV2: null == totalShippingPriceV2
-          ? _value.totalShippingPriceV2
-          : totalShippingPriceV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
-      totalTaxV2: null == totalTaxV2
-          ? _value.totalTaxV2
-          : totalTaxV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+      subtotalPrice: null == subtotalPrice
+          ? _value.subtotalPrice
+          : subtotalPrice // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
+      totalPrice: null == totalPrice
+          ? _value.totalPrice
+          : totalPrice // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
+      totalShippingPrice: null == totalShippingPrice
+          ? _value.totalShippingPrice
+          : totalShippingPrice // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
+      totalTax: null == totalTax
+          ? _value.totalTax
+          : totalTax // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
       financialStatus: null == financialStatus
           ? _value.financialStatus
           : financialStatus // ignore: cast_nullable_to_non_nullable
@@ -190,10 +190,10 @@ class _$OrderCopyWithImpl<$Res, $Val extends Order>
           ? _value.fulfillmentStatus
           : fulfillmentStatus // ignore: cast_nullable_to_non_nullable
               as String,
-      totalRefundedV2: freezed == totalRefundedV2
-          ? _value.totalRefundedV2
-          : totalRefundedV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2?,
+      totalRefunded: freezed == totalRefunded
+          ? _value.totalRefunded
+          : totalRefunded // ignore: cast_nullable_to_non_nullable
+              as MoneyV2?,
       phone: freezed == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
@@ -243,45 +243,45 @@ class _$OrderCopyWithImpl<$Res, $Val extends Order>
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res> get subtotalPriceV2 {
-    return $PriceV2CopyWith<$Res>(_value.subtotalPriceV2, (value) {
-      return _then(_value.copyWith(subtotalPriceV2: value) as $Val);
+  $MoneyV2CopyWith<$Res> get subtotalPrice {
+    return $MoneyV2CopyWith<$Res>(_value.subtotalPrice, (value) {
+      return _then(_value.copyWith(subtotalPrice: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res> get totalPriceV2 {
-    return $PriceV2CopyWith<$Res>(_value.totalPriceV2, (value) {
-      return _then(_value.copyWith(totalPriceV2: value) as $Val);
+  $MoneyV2CopyWith<$Res> get totalPrice {
+    return $MoneyV2CopyWith<$Res>(_value.totalPrice, (value) {
+      return _then(_value.copyWith(totalPrice: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res> get totalShippingPriceV2 {
-    return $PriceV2CopyWith<$Res>(_value.totalShippingPriceV2, (value) {
-      return _then(_value.copyWith(totalShippingPriceV2: value) as $Val);
+  $MoneyV2CopyWith<$Res> get totalShippingPrice {
+    return $MoneyV2CopyWith<$Res>(_value.totalShippingPrice, (value) {
+      return _then(_value.copyWith(totalShippingPrice: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res> get totalTaxV2 {
-    return $PriceV2CopyWith<$Res>(_value.totalTaxV2, (value) {
-      return _then(_value.copyWith(totalTaxV2: value) as $Val);
+  $MoneyV2CopyWith<$Res> get totalTax {
+    return $MoneyV2CopyWith<$Res>(_value.totalTax, (value) {
+      return _then(_value.copyWith(totalTax: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $PriceV2CopyWith<$Res>? get totalRefundedV2 {
-    if (_value.totalRefundedV2 == null) {
+  $MoneyV2CopyWith<$Res>? get totalRefunded {
+    if (_value.totalRefunded == null) {
       return null;
     }
 
-    return $PriceV2CopyWith<$Res>(_value.totalRefundedV2!, (value) {
-      return _then(_value.copyWith(totalRefundedV2: value) as $Val);
+    return $MoneyV2CopyWith<$Res>(_value.totalRefunded!, (value) {
+      return _then(_value.copyWith(totalRefunded: value) as $Val);
     });
   }
 }
@@ -305,13 +305,13 @@ abstract class _$$OrderImplCopyWith<$Res> implements $OrderCopyWith<$Res> {
       ShippingAddress? shippingAddress,
       ShippingAddress? billingAddress,
       String statusUrl,
-      PriceV2 subtotalPriceV2,
-      PriceV2 totalPriceV2,
-      PriceV2 totalShippingPriceV2,
-      PriceV2 totalTaxV2,
+      MoneyV2 subtotalPrice,
+      MoneyV2 totalPrice,
+      MoneyV2 totalShippingPrice,
+      MoneyV2 totalTax,
       String financialStatus,
       String fulfillmentStatus,
-      PriceV2? totalRefundedV2,
+      MoneyV2? totalRefunded,
       String? phone,
       String? cursor,
       List<SuccessfulFullfilment>? successfulFulfillments});
@@ -323,15 +323,15 @@ abstract class _$$OrderImplCopyWith<$Res> implements $OrderCopyWith<$Res> {
   @override
   $ShippingAddressCopyWith<$Res>? get billingAddress;
   @override
-  $PriceV2CopyWith<$Res> get subtotalPriceV2;
+  $MoneyV2CopyWith<$Res> get subtotalPrice;
   @override
-  $PriceV2CopyWith<$Res> get totalPriceV2;
+  $MoneyV2CopyWith<$Res> get totalPrice;
   @override
-  $PriceV2CopyWith<$Res> get totalShippingPriceV2;
+  $MoneyV2CopyWith<$Res> get totalShippingPrice;
   @override
-  $PriceV2CopyWith<$Res> get totalTaxV2;
+  $MoneyV2CopyWith<$Res> get totalTax;
   @override
-  $PriceV2CopyWith<$Res>? get totalRefundedV2;
+  $MoneyV2CopyWith<$Res>? get totalRefunded;
 }
 
 /// @nodoc
@@ -356,13 +356,13 @@ class __$$OrderImplCopyWithImpl<$Res>
     Object? shippingAddress = freezed,
     Object? billingAddress = freezed,
     Object? statusUrl = null,
-    Object? subtotalPriceV2 = null,
-    Object? totalPriceV2 = null,
-    Object? totalShippingPriceV2 = null,
-    Object? totalTaxV2 = null,
+    Object? subtotalPrice = null,
+    Object? totalPrice = null,
+    Object? totalShippingPrice = null,
+    Object? totalTax = null,
     Object? financialStatus = null,
     Object? fulfillmentStatus = null,
-    Object? totalRefundedV2 = freezed,
+    Object? totalRefunded = freezed,
     Object? phone = freezed,
     Object? cursor = freezed,
     Object? successfulFulfillments = freezed,
@@ -412,22 +412,22 @@ class __$$OrderImplCopyWithImpl<$Res>
           ? _value.statusUrl
           : statusUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      subtotalPriceV2: null == subtotalPriceV2
-          ? _value.subtotalPriceV2
-          : subtotalPriceV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
-      totalPriceV2: null == totalPriceV2
-          ? _value.totalPriceV2
-          : totalPriceV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
-      totalShippingPriceV2: null == totalShippingPriceV2
-          ? _value.totalShippingPriceV2
-          : totalShippingPriceV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
-      totalTaxV2: null == totalTaxV2
-          ? _value.totalTaxV2
-          : totalTaxV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2,
+      subtotalPrice: null == subtotalPrice
+          ? _value.subtotalPrice
+          : subtotalPrice // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
+      totalPrice: null == totalPrice
+          ? _value.totalPrice
+          : totalPrice // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
+      totalShippingPrice: null == totalShippingPrice
+          ? _value.totalShippingPrice
+          : totalShippingPrice // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
+      totalTax: null == totalTax
+          ? _value.totalTax
+          : totalTax // ignore: cast_nullable_to_non_nullable
+              as MoneyV2,
       financialStatus: null == financialStatus
           ? _value.financialStatus
           : financialStatus // ignore: cast_nullable_to_non_nullable
@@ -436,10 +436,10 @@ class __$$OrderImplCopyWithImpl<$Res>
           ? _value.fulfillmentStatus
           : fulfillmentStatus // ignore: cast_nullable_to_non_nullable
               as String,
-      totalRefundedV2: freezed == totalRefundedV2
-          ? _value.totalRefundedV2
-          : totalRefundedV2 // ignore: cast_nullable_to_non_nullable
-              as PriceV2?,
+      totalRefunded: freezed == totalRefunded
+          ? _value.totalRefunded
+          : totalRefunded // ignore: cast_nullable_to_non_nullable
+              as MoneyV2?,
       phone: freezed == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
@@ -471,13 +471,13 @@ class _$OrderImpl extends _Order {
       required this.shippingAddress,
       required this.billingAddress,
       required this.statusUrl,
-      required this.subtotalPriceV2,
-      required this.totalPriceV2,
-      required this.totalShippingPriceV2,
-      required this.totalTaxV2,
+      required this.subtotalPrice,
+      required this.totalPrice,
+      required this.totalShippingPrice,
+      required this.totalTax,
       required this.financialStatus,
       required this.fulfillmentStatus,
-      this.totalRefundedV2,
+      this.totalRefunded,
       this.phone,
       this.cursor,
       final List<SuccessfulFullfilment>? successfulFulfillments})
@@ -510,19 +510,19 @@ class _$OrderImpl extends _Order {
   @override
   final String statusUrl;
   @override
-  final PriceV2 subtotalPriceV2;
+  final MoneyV2 subtotalPrice;
   @override
-  final PriceV2 totalPriceV2;
+  final MoneyV2 totalPrice;
   @override
-  final PriceV2 totalShippingPriceV2;
+  final MoneyV2 totalShippingPrice;
   @override
-  final PriceV2 totalTaxV2;
+  final MoneyV2 totalTax;
   @override
   final String financialStatus;
   @override
   final String fulfillmentStatus;
   @override
-  final PriceV2? totalRefundedV2;
+  final MoneyV2? totalRefunded;
   @override
   final String? phone;
   @override
@@ -540,7 +540,7 @@ class _$OrderImpl extends _Order {
 
   @override
   String toString() {
-    return 'Order(id: $id, email: $email, currencyCode: $currencyCode, customerUrl: $customerUrl, lineItems: $lineItems, name: $name, orderNumber: $orderNumber, processedAt: $processedAt, shippingAddress: $shippingAddress, billingAddress: $billingAddress, statusUrl: $statusUrl, subtotalPriceV2: $subtotalPriceV2, totalPriceV2: $totalPriceV2, totalShippingPriceV2: $totalShippingPriceV2, totalTaxV2: $totalTaxV2, financialStatus: $financialStatus, fulfillmentStatus: $fulfillmentStatus, totalRefundedV2: $totalRefundedV2, phone: $phone, cursor: $cursor, successfulFulfillments: $successfulFulfillments)';
+    return 'Order(id: $id, email: $email, currencyCode: $currencyCode, customerUrl: $customerUrl, lineItems: $lineItems, name: $name, orderNumber: $orderNumber, processedAt: $processedAt, shippingAddress: $shippingAddress, billingAddress: $billingAddress, statusUrl: $statusUrl, subtotalPrice: $subtotalPrice, totalPrice: $totalPrice, totalShippingPrice: $totalShippingPrice, totalTax: $totalTax, financialStatus: $financialStatus, fulfillmentStatus: $fulfillmentStatus, totalRefunded: $totalRefunded, phone: $phone, cursor: $cursor, successfulFulfillments: $successfulFulfillments)';
   }
 
   @override
@@ -567,20 +567,20 @@ class _$OrderImpl extends _Order {
                 other.billingAddress == billingAddress) &&
             (identical(other.statusUrl, statusUrl) ||
                 other.statusUrl == statusUrl) &&
-            (identical(other.subtotalPriceV2, subtotalPriceV2) ||
-                other.subtotalPriceV2 == subtotalPriceV2) &&
-            (identical(other.totalPriceV2, totalPriceV2) ||
-                other.totalPriceV2 == totalPriceV2) &&
-            (identical(other.totalShippingPriceV2, totalShippingPriceV2) ||
-                other.totalShippingPriceV2 == totalShippingPriceV2) &&
-            (identical(other.totalTaxV2, totalTaxV2) ||
-                other.totalTaxV2 == totalTaxV2) &&
+            (identical(other.subtotalPrice, subtotalPrice) ||
+                other.subtotalPrice == subtotalPrice) &&
+            (identical(other.totalPrice, totalPrice) ||
+                other.totalPrice == totalPrice) &&
+            (identical(other.totalShippingPrice, totalShippingPrice) ||
+                other.totalShippingPrice == totalShippingPrice) &&
+            (identical(other.totalTax, totalTax) ||
+                other.totalTax == totalTax) &&
             (identical(other.financialStatus, financialStatus) ||
                 other.financialStatus == financialStatus) &&
             (identical(other.fulfillmentStatus, fulfillmentStatus) ||
                 other.fulfillmentStatus == fulfillmentStatus) &&
-            (identical(other.totalRefundedV2, totalRefundedV2) ||
-                other.totalRefundedV2 == totalRefundedV2) &&
+            (identical(other.totalRefunded, totalRefunded) ||
+                other.totalRefunded == totalRefunded) &&
             (identical(other.phone, phone) || other.phone == phone) &&
             (identical(other.cursor, cursor) || other.cursor == cursor) &&
             const DeepCollectionEquality().equals(
@@ -602,13 +602,13 @@ class _$OrderImpl extends _Order {
         shippingAddress,
         billingAddress,
         statusUrl,
-        subtotalPriceV2,
-        totalPriceV2,
-        totalShippingPriceV2,
-        totalTaxV2,
+        subtotalPrice,
+        totalPrice,
+        totalShippingPrice,
+        totalTax,
         financialStatus,
         fulfillmentStatus,
-        totalRefundedV2,
+        totalRefunded,
         phone,
         cursor,
         const DeepCollectionEquality().hash(_successfulFulfillments)
@@ -641,13 +641,13 @@ abstract class _Order extends Order {
       required final ShippingAddress? shippingAddress,
       required final ShippingAddress? billingAddress,
       required final String statusUrl,
-      required final PriceV2 subtotalPriceV2,
-      required final PriceV2 totalPriceV2,
-      required final PriceV2 totalShippingPriceV2,
-      required final PriceV2 totalTaxV2,
+      required final MoneyV2 subtotalPrice,
+      required final MoneyV2 totalPrice,
+      required final MoneyV2 totalShippingPrice,
+      required final MoneyV2 totalTax,
       required final String financialStatus,
       required final String fulfillmentStatus,
-      final PriceV2? totalRefundedV2,
+      final MoneyV2? totalRefunded,
       final String? phone,
       final String? cursor,
       final List<SuccessfulFullfilment>? successfulFulfillments}) = _$OrderImpl;
@@ -678,19 +678,19 @@ abstract class _Order extends Order {
   @override
   String get statusUrl;
   @override
-  PriceV2 get subtotalPriceV2;
+  MoneyV2 get subtotalPrice;
   @override
-  PriceV2 get totalPriceV2;
+  MoneyV2 get totalPrice;
   @override
-  PriceV2 get totalShippingPriceV2;
+  MoneyV2 get totalShippingPrice;
   @override
-  PriceV2 get totalTaxV2;
+  MoneyV2 get totalTax;
   @override
   String get financialStatus;
   @override
   String get fulfillmentStatus;
   @override
-  PriceV2? get totalRefundedV2;
+  MoneyV2? get totalRefunded;
   @override
   String? get phone;
   @override

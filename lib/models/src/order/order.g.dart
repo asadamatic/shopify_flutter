@@ -25,18 +25,17 @@ _$OrderImpl _$$OrderImplFromJson(Map<String, dynamic> json) => _$OrderImpl(
           : ShippingAddress.fromJson(
               json['billingAddress'] as Map<String, dynamic>),
       statusUrl: json['statusUrl'] as String,
-      subtotalPriceV2:
-          PriceV2.fromJson(json['subtotalPriceV2'] as Map<String, dynamic>),
-      totalPriceV2:
-          PriceV2.fromJson(json['totalPriceV2'] as Map<String, dynamic>),
-      totalShippingPriceV2: PriceV2.fromJson(
-          json['totalShippingPriceV2'] as Map<String, dynamic>),
-      totalTaxV2: PriceV2.fromJson(json['totalTaxV2'] as Map<String, dynamic>),
+      subtotalPrice:
+          MoneyV2.fromJson(json['subtotalPrice'] as Map<String, dynamic>),
+      totalPrice: MoneyV2.fromJson(json['totalPrice'] as Map<String, dynamic>),
+      totalShippingPrice:
+          MoneyV2.fromJson(json['totalShippingPrice'] as Map<String, dynamic>),
+      totalTax: MoneyV2.fromJson(json['totalTax'] as Map<String, dynamic>),
       financialStatus: json['financialStatus'] as String,
       fulfillmentStatus: json['fulfillmentStatus'] as String,
-      totalRefundedV2: json['totalRefundedV2'] == null
+      totalRefunded: json['totalRefunded'] == null
           ? null
-          : PriceV2.fromJson(json['totalRefundedV2'] as Map<String, dynamic>),
+          : MoneyV2.fromJson(json['totalRefunded'] as Map<String, dynamic>),
       phone: json['phone'] as String?,
       cursor: json['cursor'] as String?,
       successfulFulfillments: (json['successfulFulfillments'] as List<dynamic>?)
@@ -58,13 +57,13 @@ Map<String, dynamic> _$$OrderImplToJson(_$OrderImpl instance) =>
       'shippingAddress': instance.shippingAddress,
       'billingAddress': instance.billingAddress,
       'statusUrl': instance.statusUrl,
-      'subtotalPriceV2': instance.subtotalPriceV2,
-      'totalPriceV2': instance.totalPriceV2,
-      'totalShippingPriceV2': instance.totalShippingPriceV2,
-      'totalTaxV2': instance.totalTaxV2,
+      'subtotalPrice': instance.subtotalPrice,
+      'totalPrice': instance.totalPrice,
+      'totalShippingPrice': instance.totalShippingPrice,
+      'totalTax': instance.totalTax,
       'financialStatus': instance.financialStatus,
       'fulfillmentStatus': instance.fulfillmentStatus,
-      'totalRefundedV2': instance.totalRefundedV2,
+      'totalRefunded': instance.totalRefunded,
       'phone': instance.phone,
       'cursor': instance.cursor,
       'successfulFulfillments': instance.successfulFulfillments,
