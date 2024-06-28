@@ -2,6 +2,7 @@
 
 import 'package:shopify_flutter/models/json_helper.dart';
 import 'package:shopify_flutter/models/src/checkout/line_item/line_item.dart';
+import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
 import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -17,8 +18,8 @@ class LastIncompleteCheckout with _$LastIncompleteCheckout {
           String? id,
           String? currencyCode,
           String? webUrl,
-          PriceV2? totalPriceV2,
-          PriceV2? lineItemsSubtotalPrice,
+          MoneyV2? totalPrice,
+          MoneyV2? lineItemsSubtotalPrice,
           @JsonKey(fromJson: JsonHelper.lineItems) List<LineItem>? lineItems}) =
       _LastIncompleteCheckout;
 

@@ -124,11 +124,11 @@ customer(customerAccessToken: $accessToken) {
             amount
             currencyCode
           }
-          totalRefundedV2 {
+          totalRefunded {
             amount
             currencyCode
           }
-          totalShippingPriceV2 {
+          totalShippingPrice {
             amount
             currencyCode
           }

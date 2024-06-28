@@ -57,10 +57,10 @@ class Order with _$Order {
             : ShippingAddress.fromJson(json['node']['billingAddress']),
         statusUrl: json['node']['statusUrl'],
         subtotalPrice: MoneyV2.fromJson(json['node']['subtotalPrice']),
-        totalPrice: MoneyV2.fromJson(json['node']['totalPriceV2']),
-        totalRefunded: MoneyV2.fromJson(json['node']['totalRefundedV2']),
+        totalPrice: MoneyV2.fromJson(json['node']['totalPrice']),
+        totalRefunded: MoneyV2.fromJson(json['node']['totalRefunded']),
         totalShippingPrice:
-            MoneyV2.fromJson(json['node']['totalShippingPriceV2']),
+            MoneyV2.fromJson(json['node']['totalShippingPrice']),
         totalTax: MoneyV2.fromJson(json['node']['totalTax']),
         cursor: json['cursor'],
         successfulFulfillments: _getSuccessfulFulfilments(
