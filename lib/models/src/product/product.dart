@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
 import 'package:shopify_flutter/models/src/product/option/option.dart';
 import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:shopify_flutter/models/src/product/product_media/product_media.dart';
@@ -169,14 +170,14 @@ class Product with _$Product {
           return ((variants ?? []) as List).map((v) {
             Map<String, dynamic> jsonVariant =
                 v is ProductVariant ? v.toJson() : v;
-            jsonVariant['price'] = jsonVariant['price'] is PriceV2
+            jsonVariant['price'] = jsonVariant['price'] is MoneyV2
                 ? jsonVariant['price'].toJson()
                 : jsonVariant['price'];
-            jsonVariant['unitPrice'] = jsonVariant['unitPrice'] is PriceV2
+            jsonVariant['unitPrice'] = jsonVariant['unitPrice'] is MoneyV2
                 ? jsonVariant['unitPrice'].toJson()
                 : jsonVariant['unitPrice'];
             jsonVariant['compareAtPrice'] =
-                jsonVariant['compareAtPrice'] is PriceV2
+                jsonVariant['compareAtPrice'] is MoneyV2
                     ? jsonVariant['compareAtPrice'].toJson()
                     : jsonVariant['compareAtPrice'];
             jsonVariant['image'] = jsonVariant['image'] is ShopifyImage
