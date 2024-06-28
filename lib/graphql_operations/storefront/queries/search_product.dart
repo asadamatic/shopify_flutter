@@ -59,7 +59,7 @@ query($query: String!, $cursor : String, $limit : Int, $sortKey : SearchSortKeys
       variants(first: 250) {
         edges {
           node {
-            priceV2 {
+            price {
               amount
               currencyCode
             }
@@ -69,7 +69,7 @@ query($query: String!, $cursor : String, $limit : Int, $sortKey : SearchSortKeys
               originalSrc
               id
             }
-            compareAtPriceV2 {
+            compareAtPrice {
               amount
               currencyCode
             }

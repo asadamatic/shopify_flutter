@@ -12,11 +12,11 @@ mutation checkoutCreate($input: CheckoutCreateInput!) {
       email
       ready
       appliedGiftCards {
-        amountUsedV2 {
+        amountUsed {
           amount
           currencyCode
         }
-        balanceV2 {
+        balance {
           amount
           currencyCode
         }
@@ -25,7 +25,7 @@ mutation checkoutCreate($input: CheckoutCreateInput!) {
       requiresShipping
       shippingLine {
         handle
-        priceV2 {
+        price {
           amount
           currencyCode
         }
@@ -75,7 +75,7 @@ mutation checkoutCreate($input: CheckoutCreateInput!) {
             }
             variant {
               id
-              priceV2 {
+              price {
                 amount
                 currencyCode
               }
@@ -85,7 +85,7 @@ mutation checkoutCreate($input: CheckoutCreateInput!) {
                 originalSrc
                 id
               }
-              compareAtPriceV2 {
+              compareAtPrice {
                 amount
                 currencyCode
               }
@@ -111,11 +111,11 @@ mutation checkoutCreate($input: CheckoutCreateInput!) {
                         id
                         originalSrc
                       }
-                      priceV2 {
+                      price {
                         amount
                         currencyCode
                       }
-                      compareAtPriceV2 {
+                      compareAtPrice {
                         amount
                         currencyCode
                       }
@@ -191,17 +191,17 @@ mutation checkoutCreate($input: CheckoutCreateInput!) {
       note
       webUrl
       updatedAt
-      totalTaxV2 {
+      totalTax {
         amount
         currencyCode
       }
-      totalPriceV2 {
+      totalPrice {
         amount
         currencyCode
       }
       taxesIncluded
       taxExempt
-      subtotalPriceV2 {
+      subtotalPrice {
         amount
         currencyCode
       }

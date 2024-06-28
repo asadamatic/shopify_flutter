@@ -32,7 +32,7 @@ customer(customerAccessToken: $accessToken) {
                 quantity
                 title
                 variant {
-                  priceV2 {
+                  price {
                     amount
                     currencyCode
                   }
@@ -42,7 +42,7 @@ customer(customerAccessToken: $accessToken) {
                     id
                     originalSrc
                   }
-                  compareAtPriceV2 {
+                  compareAtPrice {
                     amount
                     currencyCode
                   }
@@ -116,11 +116,11 @@ customer(customerAccessToken: $accessToken) {
             zip
           }
           statusUrl
-          subtotalPriceV2 {
+          subtotalPrice {
             amount
             currencyCode
           }
-          totalPriceV2 {
+          totalPrice {
             amount
             currencyCode
           }
@@ -132,7 +132,7 @@ customer(customerAccessToken: $accessToken) {
             amount
             currencyCode
           }
-          totalTaxV2 {
+          totalTax {
             amount
             currencyCode
           }

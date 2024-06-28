@@ -32,7 +32,7 @@ class ProductVariant with _$ProductVariant {
     Map<String, dynamic> nodeJson = json['node'] ?? const {};
 
     return ProductVariant(
-      price: MoneyV2.fromJson(nodeJson['priceV2']),
+      price: MoneyV2.fromJson(nodeJson['price']),
       title: nodeJson['title'],
       image: nodeJson['image'] != null
           ? ShopifyImage.fromJson(nodeJson['image'])

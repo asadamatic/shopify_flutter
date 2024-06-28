@@ -59,7 +59,7 @@ mutation MyMutation($firstName: String, $lastName: String, $email: String!, $pas
         email
         id
         webUrl
-        totalPriceV2 {
+        totalPrice {
           amount
           currencyCode
         }
@@ -80,7 +80,7 @@ mutation MyMutation($firstName: String, $lastName: String, $email: String!, $pas
                }
               }
               variant {
-                priceV2 {
+                price {
                   amount
                   currencyCode
                 }
@@ -90,7 +90,7 @@ mutation MyMutation($firstName: String, $lastName: String, $email: String!, $pas
                   id
                   originalSrc
                 }
-                compareAtPriceV2 {
+                compareAtPrice {
                   amount
                   currencyCode
                 }
@@ -117,11 +117,11 @@ mutation MyMutation($firstName: String, $lastName: String, $email: String!, $pas
                           id
                           originalSrc
                         }
-                        priceV2 {
+                        price {
                           amount
                           currencyCode
                         }
-                        compareAtPriceV2 {
+                        compareAtPrice {
                           amount
                           currencyCode
                         }

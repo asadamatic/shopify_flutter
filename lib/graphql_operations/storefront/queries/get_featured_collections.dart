@@ -27,11 +27,11 @@ query getFeaturedCollectionQuery($query: String!){
                       id
                       originalSrc
                     }
-                    priceV2 {
+                    price {
                       amount
                       currencyCode
                     }
-                    compareAtPriceV2 {
+                    compareAtPrice {
                       amount
                       currencyCode
                     }

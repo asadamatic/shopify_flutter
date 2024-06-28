@@ -7,11 +7,11 @@ mutation checkoutShippingAddressUpdate($checkoutId : ID!, $address1 : String, $a
       email
       ready
       appliedGiftCards {
-        amountUsedV2 {
+        amountUsed {
           amount
           currencyCode
         }
-        balanceV2 {
+        balance {
           amount
           currencyCode
         }
@@ -20,7 +20,7 @@ mutation checkoutShippingAddressUpdate($checkoutId : ID!, $address1 : String, $a
       requiresShipping
       shippingLine {
         handle
-        priceV2 {
+        price {
           amount
           currencyCode
         }
@@ -66,7 +66,7 @@ mutation checkoutShippingAddressUpdate($checkoutId : ID!, $address1 : String, $a
             }
             variant {
               id
-              priceV2 {
+              price {
                 amount
                 currencyCode
               }
@@ -76,7 +76,7 @@ mutation checkoutShippingAddressUpdate($checkoutId : ID!, $address1 : String, $a
                 originalSrc
                 id
               }
-              compareAtPriceV2 {
+              compareAtPrice {
                 amount
                 currencyCode
               }
@@ -102,11 +102,11 @@ mutation checkoutShippingAddressUpdate($checkoutId : ID!, $address1 : String, $a
                         id
                         originalSrc
                       }
-                      priceV2 {
+                      price {
                         amount
                         currencyCode
                       }
-                      compareAtPriceV2 {
+                      compareAtPrice {
                         amount
                         currencyCode
                       }
@@ -182,17 +182,17 @@ mutation checkoutShippingAddressUpdate($checkoutId : ID!, $address1 : String, $a
       note
       webUrl
       updatedAt
-      totalTaxV2 {
+      totalTax {
         amount
         currencyCode
       }
-      totalPriceV2 {
+      totalPrice {
         amount
         currencyCode
       }
       taxesIncluded
       taxExempt
-      subtotalPriceV2 {
+      subtotalPrice {
         amount
         currencyCode
       }

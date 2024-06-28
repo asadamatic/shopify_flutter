@@ -80,11 +80,11 @@ query($id : ID!, $cursor : String, $limit : Int, $sortKey : ProductCollectionSor
                     id
                     originalSrc
                   }
-                  priceV2 {
+                  price {
                     amount
                     currencyCode
                   }
-                  compareAtPriceV2 {
+                  compareAtPrice {
                     amount
                     currencyCode
                   }
