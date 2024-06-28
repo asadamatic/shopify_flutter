@@ -37,7 +37,9 @@ class ProductVariant with _$ProductVariant {
       image: nodeJson['image'] != null
           ? ShopifyImage.fromJson(nodeJson['image'])
           : null,
-      compareAtPrice: MoneyV2.fromJson(nodeJson['compareAtPrice']),
+      compareAtPrice: nodeJson['compareAtPriceV2'] != null
+          ? MoneyV2.fromJson(nodeJson['compareAtPriceV2'])
+          : null,
       weight: double.tryParse(nodeJson['weight'].toString()) ?? 0.0,
       weightUnit: nodeJson['weightUnit'],
       availableForSale: nodeJson['availableForSale'],
