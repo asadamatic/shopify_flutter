@@ -21,7 +21,6 @@ import 'package:shopify_flutter/models/src/checkout/tokanized_checkout/tokanized
 import 'package:shopify_flutter/models/src/order/order.dart';
 import 'package:shopify_flutter/models/src/order/orders/orders.dart';
 import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
-import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:shopify_flutter/models/src/shopify_user/address/address.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 

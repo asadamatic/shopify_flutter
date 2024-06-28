@@ -2,7 +2,6 @@ import 'dart:developer';
 
 import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
 import 'package:shopify_flutter/models/src/product/option/option.dart';
-import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:shopify_flutter/models/src/product/product_media/product_media.dart';
 import 'package:shopify_flutter/models/src/product/product_variant/product_variant.dart';
 import 'package:shopify_flutter/models/src/product/shopify_image/shopify_image.dart';

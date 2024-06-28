@@ -1,7 +1,6 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
-import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'tokanized_checkout.freezed.dart';

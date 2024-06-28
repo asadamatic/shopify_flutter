@@ -1,7 +1,6 @@
 import 'package:shopify_flutter/models/src/checkout/product_variant_checkout/product_variant_checkout.dart';
 import 'package:shopify_flutter/models/src/order/discount_allocations/discount_allocations.dart';
 import 'package:shopify_flutter/models/src/product/money_v_2/money_v_2.dart';
-import 'package:shopify_flutter/models/src/product/price_v_2/price_v_2.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'line_item_order.freezed.dart';
