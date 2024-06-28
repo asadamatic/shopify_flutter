@@ -45,7 +45,9 @@ class ProductVariant with _$ProductVariant {
       id: nodeJson['id'],
       quantityAvailable: nodeJson['quantityAvailable'],
       sku: nodeJson['sku'],
-      unitPrice: MoneyV2.fromJson(nodeJson['unitPrice']),
+      unitPrice: nodeJson['unitPrice'] != null
+          ? MoneyV2.fromJson(nodeJson['unitPrice'])
+          : null,
       unitPriceMeasurement: nodeJson['unitPriceMeasurement'] != null
           ? UnitPriceMeasurement.fromJson(nodeJson['unitPriceMeasurement'])
           : null,
